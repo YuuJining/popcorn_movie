@@ -10,7 +10,9 @@ padding:0px 10px;
 const HomePresenter = ({ nowPlaying, upComing, popular, error, loading }) => loading ? null :
 <Container>
     {nowPlaying && nowPlaying.length > 0 && 
-    <Section title="Now Playing">{nowPlaying.map(movie => movie.title)}</Section>}
+    <Section title="Now Playing">
+            {nowPlaying.map(movie => movie.title)}
+    </Section>}
     {upComing && upComing.length > 0 && (
         <Section title="UpComing Movies">
             {upComing.map(movie => movie.title)}
