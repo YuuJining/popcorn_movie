@@ -34,7 +34,7 @@ const SearchPresenter = ({ movieResults, tvResults, searchTerm, error, loading, 
         </Section>
         )}
         {tvResults && tvResults.length > 0 && (
-        <Section title="TV Results">
+        <Section title="TV Show Results">
             {tvResults.map(show=> (
             <span key={show.id}>{show.name}</span>
             ))}
