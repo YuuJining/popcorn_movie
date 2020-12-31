@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import Section from "Components/Section";
 import Loader from "Components/Loader";
+import Error from "Components/Error";
 
 const Container = styled.div`
 padding:0px 20px;
@@ -24,6 +25,7 @@ const HomePresenter = ({ nowPlaying, upComing, popular, error, loading }) => loa
             {popular.map(movie => <span key={movie.id}>{movie.title}</span>)}
         </Section>
     )}
+    {error && <Error text={error} /> }
 </Container>;
 
 HomePresenter.prototype = {
