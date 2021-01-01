@@ -4,6 +4,7 @@ import styled from "styled-components";
 import Section from "Components/Section";
 import Loader from "Components/Loader";
 import Message from "Components/Message";
+import Poster from "Components/Poster";
 
 const Container = styled.div`
 padding:0px 20px;
@@ -13,7 +14,7 @@ const HomePresenter = ({ nowPlaying, upComing, popular, error, loading }) => loa
 <Container>
     {nowPlaying && nowPlaying.length > 0 && 
     <Section title="Now Playing">
-            {nowPlaying.map(movie => <span key={movie.id}>{movie.title}</span>)}
+            {nowPlaying.map(movie => <Poster />)}
     </Section>}
     {upComing && upComing.length > 0 && (
         <Section title="UpComing Movies">
