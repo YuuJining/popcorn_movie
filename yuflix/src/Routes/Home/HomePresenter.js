@@ -19,7 +19,7 @@ const HomePresenter = ({ nowPlaying, upComing, popular, error, loading }) => loa
                     key={movie.id} 
                     id={movie.id}
                     title={movie.original_title} 
-                    imgUrl={movie.poster_path}
+                    imageUrl={movie.poster_path}
                     rating={movie.vote_average}
                     isMovie={true}
                     year={movie.release_date && movie.release_date.substring(0,4)}
@@ -33,7 +33,7 @@ const HomePresenter = ({ nowPlaying, upComing, popular, error, loading }) => loa
                     key={movie.id} 
                     id={movie.id}
                     title={movie.original_title} 
-                    imgUrl={movie.poster_path}
+                    imageUrl={movie.poster_path}
                     rating={movie.vote_average}
                     isMovie={true}
                     year={movie.release_date && movie.release_date.substring(0,4)}
@@ -48,7 +48,7 @@ const HomePresenter = ({ nowPlaying, upComing, popular, error, loading }) => loa
                     key={movie.id} 
                     id={movie.id}
                     title={movie.original_title} 
-                    imgUrl={movie.poster_path}
+                    imageUrl={movie.poster_path}
                     rating={movie.vote_average}
                     isMovie={true}
                     year={movie.release_date && movie.release_date.substring(0,4)}
