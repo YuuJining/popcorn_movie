@@ -9,7 +9,7 @@ const Container = styled.div`
 
 const Image = styled.div`
     background-image: url(${props => props.bgUrl});
-    height: 180px;
+    height: 290px;
     background-size: cover;
     border-radius: 4px;
     background-position: center center;
@@ -21,10 +21,19 @@ const Rating = styled.span`
     right: 5px;
     position: absolute;
     opacity: 0;
+    font-size: 15px;
+`;
+
+const Preview = styled.div`
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 65px;
+    font-size: 15px;
 `;
 
 const ImageContainer = styled.div`
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     position: relative;
     &:hover {
         ${Image}{
@@ -33,16 +42,20 @@ const ImageContainer = styled.div`
         ${Rating} {
             opacity: 1;
         }
+        ${Preview} {
+            opacity: 1;
+        }
     }
 `;
 
 const Title = styled.span`
+    font-size: 15px;
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 `;
 
 const Year = styled.span`
-    font-size: 11px;
+    font-size: 15px;
     color: rgba(255,255,255,0.5);
 `;
 
@@ -57,6 +70,7 @@ const Poster = ({id, imageUrl, title, rating, year, isMovie = false }) => (
                     "/noPosterSmall.PNG"
                     } 
                     />
+                <Preview>상세 보기</Preview>
                 <Rating>
                     <span role="img" aria-label="rating">
                         ⭐ 

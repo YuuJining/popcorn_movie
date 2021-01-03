@@ -27,7 +27,7 @@ const Item = styled.li`
     text-align: center;
     font-size: 20px;
     border-bottom: 3px solid
-     ${props => (props.current ? "#E50914" : "transparent")};
+     ${props => (props.current ? "#B50914" : "transparent")};
     transition: border-bottom 0.5s ease-in-out;
 `;
 
@@ -42,13 +42,13 @@ export default withRouter(({location: {pathname} }) => (
     <Header>
         <List>
             <Item current={pathname==="/"}>
-                <SLink to="/">Movies</SLink>
+                <SLink to="/">영화</SLink>
             </Item>
             <Item current={pathname==="/tv"}>
                 <SLink to="/tv">TV</SLink>
             </Item>
             <Item current={pathname==="/search"}>
-                <SLink to="/search">Search</SLink>
+                <SLink to="/search">검색</SLink>
             </Item>
         </List>
     </Header>
